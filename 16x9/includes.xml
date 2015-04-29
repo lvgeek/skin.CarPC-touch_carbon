@@ -330,7 +330,7 @@
     </include>
         
 	<include name="CommonVolumeBottom">
-		<control type="group">
+		<!--<control type="group">
 			<visible>Player.HasMedia</visible>
 			<posx>15</posx>
 			<posy>15</posy>
@@ -379,7 +379,7 @@
 				<textureslidernib>OSDSliderNib.png</textureslidernib>
 				<textureslidernibfocus>OSDSliderNib.png</textureslidernibfocus>
 			</control>
-		</control>
+		</control>-->
 	</include>
 	<include name="BottomSeekPlayback">
 		<control type="group">
@@ -499,11 +499,25 @@
 	<include name="PlayerControlsAll">
 		<control type="group" id="100">
 			<visible>Player.HasAudio | Player.HasVideo</visible>
-			<posx>204</posx>
+			<posx>0</posx>
 			<posy>11</posy>
 			<include>16x9_xPos_Relocation</include>
+			<control type="fadelabel">
+				<posx>-150</posx>
+				<posy>24</posy>
+				<width>300</width>
+				<height>20</height>
+				<scrollout>false</scrollout>
+				<pauseatend>3000</pauseatend>
+				<label>[B]$INFO[MusicPlayer.Title]$INFO[VideoPlayer.Title][/B]</label>
+				<label>[B]$INFO[MusicPlayer.Artist][/B]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font14</font>
+				<textcolor>white</textcolor>
+			</control>
 			<control type="button" id="600">
-				<posx>0</posx>
+				<posx>200</posx>
 				<posy>4</posy>
 				<width>82</width>
 				<height>82</height>
@@ -518,7 +532,7 @@
 				<onclick>PlayerControl(Previous)</onclick>
 			</control>
 			<control type="togglebutton" id="602">
-				<posx>90</posx>
+				<posx>290</posx>
 				<posy>4</posy>
 				<width>82</width>
 				<height>82</height>
@@ -537,7 +551,7 @@
 				<onclick>PlayerControl(Play)</onclick>
 			</control>
 			<control type="button" id="603">
-				<posx>180</posx>
+				<posx>380</posx>
 				<posy>4</posy>
 				<width>82</width>
 				<height>82</height>
@@ -552,7 +566,7 @@
 				<onclick>PlayerControl(Stop)</onclick>
 			</control>
 			<control type="button" id="605">
-				<posx>270</posx>
+				<posx>470</posx>
 				<posy>4</posy>
 				<width>82</width>
 				<height>82</height>
@@ -856,7 +870,7 @@
 				<texture>music2.png</texture>
 			</control>
 				<control type="button">
-				<description>video</description>
+				<description>Phone</description>
 				<posx>0</posx>
 				<posy>85</posy>
 				<width>70</width>
@@ -870,7 +884,7 @@
 				<posy>85</posy>
 				<width>70</width>
 				<height>70</height>
-				<texture>video2.png</texture>
+				<texture>phoneW.png</texture>
 			</control>
 			<control type="button">
 				<description>Pictures</description>
@@ -890,21 +904,21 @@
 				<texture>pictures2.png</texture>
 			</control>
 			<control type="button">
-				<description>Radio</description>
+				<description>Pandora</description>
 				<posx>0</posx>
 				<posy>239</posy>
 				<width>70</width>
 				<height>70</height>
 				<texturenofocus>-</texturenofocus>
 				<texturefocus>button-focus2.png</texturefocus>
-				<onclick>RunScript("plugin.program.radioFM")</onclick>
+				<onclick>RunScript("script.xbmc.pandorajson")</onclick>
 			</control>
 			<control type="image">				
 				<posx>0</posx>
 				<posy>239</posy>
 				<width>70</width>
 				<height>70</height>
-				<texture>radio2.png</texture>
+				<texture>pandora1.png</texture>
 			</control>
 			<control type="button">
 				<description>Navit</description>
@@ -1097,7 +1111,7 @@
 		<!--<control type="group">
 			<posx>220</posx>
 			<posy>700</posy>
-			<visible>Player.HasMedia + !Window.IsVisible(PlayerControls)</visible>
+			<visible>Player.HasMedia + !Window.IsVisible(PlayerControls)</visible> 
 			<include>VisibleFadeEffect</include>
 			<control type="button">
 				<posx>0</posx>
@@ -1206,7 +1220,7 @@
 				<textcolor>black</textcolor>
 				<visible>Player.HasVideo + VideoPlayer.Content(MusicVideos)</visible>
 			</control>
-		</control>-->  
+		</control> --> 
 	</include>
 	<include name="ScrollOffsetLabel">
 		<control type="group">

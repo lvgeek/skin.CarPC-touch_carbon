@@ -13,13 +13,13 @@
 			<visible>Player.HasVideo</visible>
 		</control>
 		
-	<!--<control type="image">
+		<control type="image">
 				<posx>0</posx>
 				<posy>ScreenHeight</posy>
 				<width>ScreenWidth</width>
 				<height>-100</height>
 				<texture>shelf_shadow.png</texture>
-		</control>-->
+		</control>
 		
 		<include>CommonTopBar</include>		
 	
