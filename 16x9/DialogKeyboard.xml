@@ -3,7 +3,7 @@
 	<defaultcontrol always="true">300</defaultcontrol>
 	<include>dialogeffect</include>
 	<coordinates>
-		<system>1</system>
+		<system>2</system>
 		<left>0</left>
 		<top>0</top>
 	</coordinates>
