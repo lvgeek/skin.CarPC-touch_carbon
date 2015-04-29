@@ -45,7 +45,7 @@
       				<onright>4</onright>				
 				<texturenofocus>home_1.png</texturenofocus>
 				<texturefocus border="5">home_1_p.png</texturefocus>
-				<onclick>ActivateWindow(numericinput)</onclick>
+				<onclick>RunScript("script.audio.BT_BC127_HFP")</onclick>
 			</control>
 			
 			<control type="image">
