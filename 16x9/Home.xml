@@ -156,7 +156,7 @@
 			<posy>147</posy>
 			<width>400</width>
 			<height>400</height>
-			<texture>z_logo.png</texture>
+			<texture>350Z.png</texture>
 		</control>
 	
 		<control type="group">
