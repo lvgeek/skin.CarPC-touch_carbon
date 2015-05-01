@@ -7,7 +7,7 @@
 			<posy>0</posy>
 			<width>ScreenWidth</width>
 			<height>ScreenHeight</height>
-			<texture>black.png</texture>
+			<texture>Carbon-Fiber-9.jpg</texture>
 		</control>
 		<control type="visualisation">
 			<description>visualisation</description>
@@ -29,7 +29,8 @@
 				<width>ScreenWidth</width>
 				<height>105</height>
 				<colordiffuse>AAFFFFFF</colordiffuse>
-				<texture>black-back.png</texture>
+<!--				<texture>black-back.png  </texture>-->
+				<texture>Carbon-Fiber-9.jpg</texture>
 			</control>
 			<control type="label">
 				<description>row 1 label</description>
@@ -70,7 +71,7 @@
 				<font>font12</font>
 			</control>
 		</control>
-		<!--<include>PlayerControlCommons</include>-->
-		<include>CommonAudioVideoTitle</include>
+		<!--<include>PlayerControlCommons</include>
+		<include>CommonAudioVideoTitle</include>-->
 	</controls>
 </window>
