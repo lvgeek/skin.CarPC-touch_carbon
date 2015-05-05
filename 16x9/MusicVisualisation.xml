@@ -71,7 +71,7 @@
 				<font>font12</font>
 			</control>
 		</control>
-		<!--<include>PlayerControlCommons</include>
-		<include>CommonAudioVideoTitle</include>-->
+		<!--<include>PlayerControlCommons</include>-->
+		<include>CommonAudioVideoTitle</include>
 	</controls>
 </window>
