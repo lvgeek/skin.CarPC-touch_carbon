@@ -23,9 +23,8 @@
         <!-- Bottom bar song/radio info -->
         <control type="group">
             <posy>50r</posy>
-            <include>MusicPlayerTitle</include>
-            <include>RadioStationName</include>
-        </control> 
+            <include>PlayerinfoNav</include>
+       </control> 
 
 	</controls>
 </window>

@@ -85,7 +85,7 @@
       				<onright>5</onright>				
 				<texturenofocus >home_2.png</texturenofocus>
 				<texturefocus border="5">home_2_p.png</texturefocus>
-				<onclick>RunScript("plugin.program.navigation")</onclick>
+				<onclick>RunScript("script.program.navigation")</onclick>
 			</control>
 			<control type="image">
 				<description>Navit Button Image</description>
@@ -124,7 +124,7 @@
       				<onright>6</onright>				
 				<texturenofocus >home_3.png</texturenofocus>
 				<texturefocus border="5">home_3_p.png</texturefocus>
-				<onclick>RunScript("script.xbmc.pandorajson")</onclick>
+				<onclick>ActivateWindow(10025,plugin://plugin.audio.pandoki/?play=5158)</onclick>
 			</control>
 			<control type="image">
 				<description>Pandora</description>
@@ -289,7 +289,7 @@
 		
 		<include>CommonBottomBar</include>
 		<include>MusicPlayerTitle</include>
-		<include>RadioStationName</include>
+		<!--include>RadioStationName</include>-->
 		<include>HomeRecentlyAddedInfo</include>
 		<include>BottomNowPLaying</include>
 		

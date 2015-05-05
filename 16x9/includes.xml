@@ -207,10 +207,8 @@
 		<control type="group">
 			<include>Window_OpenClose_Animation_Slide_Up</include>
             <posx>0</posx>
-            <posy>501</posy>
-           
+            <posy>501</posy>          
             <control type="label">
-                <visible>substring(Window(Home).Property(Radio.Active),false)</visible>
                 <posx>7</posx>
                 <posy>75</posy>
                 <width>600</width>
@@ -225,7 +223,6 @@
                 <scrollsuffix> - </scrollsuffix>
             </control>
             <control type="label">
-                <visible>substring(Window(Home).Property(Radio.Active),false)</visible>
                 <posx>13r</posx>
                 <posy>75</posy>
                 <width>600</width>
@@ -241,39 +238,37 @@
             </control>
         </control>
 	</include>
-	<include name="RadioStationName">
+
+	<include name="PlayerinfoNav">
 		<control type="group">
 			<include>Window_OpenClose_Animation_Slide_Up</include>
             <posx>0</posx>
-            <posy>570</posy>
+            <posy>0</posy>
             <control type="label">
-                <visible>substring(Window(Home).Property(Radio.Active),true)</visible>
                 <posx>10</posx>
                 <posy>0</posy>
                 <width>800</width>
                 <height>70</height>
-                <font>font50_title</font>
+                <font>font30_title</font>
                 <textcolor>white</textcolor>
                 <selectedcolor>selected</selectedcolor>
                 <align></align>
                 <aligny>center</aligny>
-                <label>$INFO[Window(Home).Property(Radio.Frequency)]</label>
+                <label>$INFO[MusicPlayer.Artist]</label>
                 <scrollspeed>50</scrollspeed>
                 <scrollsuffix> - </scrollsuffix>
             </control>
             <control type="label">
-                <visible>substring(Window(Home).Property(Radio.Active),true)</visible>
                 <posx>10r</posx>
                 <posy>0</posy>
                 <width>800</width>
                 <height>70</height>
-                <font>font50_title</font>
+                <font>font30_title</font>
                 <textcolor>white</textcolor>
                 <selectedcolor>selected</selectedcolor>
                 <align>right</align>
                 <aligny>center</aligny>
-                <!--<info>MusicPlayer.Title</info>-->
-                <label>$INFO[Window(Home).Property(Radio.StationName)]</label>
+                <label>$INFO[MusicPlayer.Title]</label>                
                 <scrollspeed>50</scrollspeed>
                 <scrollsuffix> - </scrollsuffix>
             </control>
@@ -291,15 +286,15 @@
 		</control>
 		<!--<include>CommonHeader</include>-->
 	</include>
-	<!--<include name="CommonBackgroundOverlay">
-		<control type="image">
+	<include name="CommonBackgroundOverlay">
+		<!--<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>ScreenWidth</width>
 				<height>150</height>
 				<texture>shelf_shadow.png</texture>
-			</control>
-	</include>-->
+			</control>-->
+	</include>
     <include name="BottomNowPLaying">
         <control type="group">
             <include>Window_OpenClose_Animation_Slide_Up</include>
@@ -502,19 +497,26 @@
 			<posx>0</posx>
 			<posy>11</posy>
 			<include>16x9_xPos_Relocation</include>
-			<control type="fadelabel">
-				<posx>-150</posx>
-				<posy>24</posy>
-				<width>300</width>
+			<control type="label">
+				<posx>-210</posx>
+				<posy>10</posy>
+				<width>400</width>
 				<height>20</height>
 				<scrollout>false</scrollout>
-				<pauseatend>3000</pauseatend>
-				<label>[B]$INFO[MusicPlayer.Title]$INFO[VideoPlayer.Title][/B]</label>
-				<label>[B]$INFO[MusicPlayer.Artist][/B]</label>
+				<pauseatend>2500</pauseatend>
+				<label>Album: $INFO[MusicPlayer.Album]</label>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font14</font>
 				<textcolor>white</textcolor>
+			</control>
+			<control type="progress" id="2">
+				<description>Volume</description>
+				<posx>-180</posx>
+				<posy>41</posy>
+				<width>337</width>
+				<height>37</height>
+				<info>Player.Progress</info>
 			</control>
 			<control type="button" id="600">
 				<posx>200</posx>
@@ -582,7 +584,6 @@
 			</control>
 		</control>
 	</include>
-	
 	
 	
 	<include name="BehindDialogFadeOut">
@@ -826,7 +827,7 @@
     
     
 		<include name="MediaBladeLeft">
-		<control type="group">
+<!--		<control type="group">
 			<animation effect="slide" start="-200,0" end="0,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="-200,0" time="500" tween="quadratic" easing="out">WindowClose</animation>
 			<posx>0</posx>
@@ -877,7 +878,7 @@
 				<height>70</height>
 				<texturenofocus>-</texturenofocus>
 				<texturefocus>button-focus2.png</texturefocus>
-				<onclick>ActivateWindow(Videos)</onclick>
+				<onclick>RunScript("script.audio.BT_BC127_HFP")</onclick>
 			</control>
 			<control type="image">				
 				<posx>0</posx>
@@ -911,7 +912,7 @@
 				<height>70</height>
 				<texturenofocus>-</texturenofocus>
 				<texturefocus>button-focus2.png</texturefocus>
-				<onclick>RunScript("script.xbmc.pandorajson")</onclick>
+				<onclick>ActivateWindow(10500)</onclick>
 			</control>
 			<control type="image">				
 				<posx>0</posx>
@@ -1005,7 +1006,7 @@
 					</control>
 			
 			</control>
-		</control>
+		</control>-->
 	</include>
 	
 <include name="SubMenuCommonLayout">
