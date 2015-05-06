@@ -95,7 +95,7 @@
 						<posy>11</posy>
 						<width>120</width>
 						<height>37</height>
-						<control type="image">
+						<!--<control type="image">
 							<description>rating back</description>
 							<posx>0</posx>
 							<posy>0</posy>
@@ -112,7 +112,7 @@
 							<height>37</height>
 							<aspectratio align="center">keep</aspectratio>
 							<texture fallback="LeftRating/rating0.png">$INFO[Player.StarRating,light/left_rating/]</texture>
-						</control>
+						</control>-->
 					</control>
 				</control>
 				<control type="label">
@@ -612,7 +612,8 @@
 				<texturenofocus border="5">floor_button_t.png</texturenofocus>
 				<texturefocus border="5">floor_buttonFO.png</texturefocus>
 				<onclick>Skin.ToggleSetting(PlayerControlsSubMenuVisible)</onclick>
-				<visible>Window.IsVisible(Fullscreenvideo) | Window.IsVisible(Visualisation)</visible>
+				<visible>Window.IsVisible(
+screenvideo) | Window.IsVisible(Visualisation)</visible>
 			</control>
 			<control type="radiobutton">
 				<description>Fullscreen Button</description>
