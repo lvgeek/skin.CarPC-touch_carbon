@@ -95,6 +95,7 @@
 			<include>16x9_xPos_Relocation</include>
 		</control>
 		<control type="button">
+            <visible>Player.HasAudio | Player.HasVideo</visible>
 			<posx>400</posx>
 			<posy>0</posy>
 			<width>400</width>

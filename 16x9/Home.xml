@@ -262,8 +262,8 @@
       				<onright>3</onright>				
 				<texturenofocus>home_6.png</texturenofocus>
 				<texturefocus border="5">home_6_p.png</texturefocus>
-				<onclick>ActivateWindow(virtualkeyboard)</onclick>
-				<!--<onclick>RunScript("script.obd2")</onclick>-->
+				<!--<onclick>ActivateWindow(virtualkeyboard)</onclick>-->
+				<onclick>RunScript("script.obd2")</onclick>
 			</control>
 			<control type="image">
 				<description>OBDII Button Image</description>
